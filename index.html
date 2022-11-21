@@ -2,10 +2,18 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    
     <title>Maliek News Blog</title>
+
     <link rel="canonical" href="./regular-html-version.html" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <base href="/">
+
     <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
     <meta name="description" content="A new Flutter project."/>
 
@@ -16,7 +24,7 @@
     <link rel="apple-touch-icon" href="icons/Icon-192.png">
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="manifest" href="manifest.json">
-    <script type="application/ld+json">
+    <script id="amp-access" type="application/Id+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
@@ -24,30 +32,63 @@
         "image": ["thumbnail1.jpg"],
         "datePublished": "2022-02-05T08:00:00+08:00"
       }
-    </script>
-  
-   
-  
-  <base href="/amp/">
-
-  
-  <!-- iOS meta tags & icons -->
-  
-  <!-- Favicon -->
-        <link rel="canonical" href="http://amp.autoplaced.com" >
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script id="amp-access" type="application/json">
       {
         "authorization": "https://ampbyexample.com/components/amp-access/authorization?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
         "pingback": "https://ampbyexample.com/components/amp-access/authorization?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
         "login": "https://ampbyexample.com/components/amp-access/login?rid=READER_ID&url=CANONICAL_URL",
         "authorizationFallbackResponse": {"error": true}
       }
+
+  // Make sure that the properties exist on the window.
+  window.googlefc = window.googlefc || {};
+  window.googlefc.ccpa = window.googlefc.ccpa || {}
+  // Signals that the default DNS link will be overridden.
+  googlefc.ccpa.overrideDnsLink = true;
+
+    // Make sure that the properties exist on the window.
+    window.googlefc = window.googlefc || {};
+    window.googlefc.ccpa = window.googlefc.ccpa || {}
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    // To guarantee functionality, this must go before the FC tag on the page.
+    googlefc.controlledMessagingFunction = (message) => {
+     user.isSubscriber().then(
+       function (isSubscriber) {
+         // Do not show the message if a user is a subscriber.
+         if (isSubscriber) {
+           message.proceed(false);
+         } else {
+           message.proceed(true);
+         }
+       }
+     );
+     if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  
+  // Make sure that the properties exist on the window.
+  window.googlefc = window.googlefc || {};
+  window.googlefc.ccpa = window.googlefc.ccpa || {}
+  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+  // Queue the callback on the callbackQueue.
+  googlefc.callbackQueue.push({
+    'AD_BLOCK_DATA_READY':
+    () => {
+      if (googlefc.getAdBlockerStatus() == googlefc.AdBlockerStatusEnum.NO_AD_BLOCKER) {
+        // Handle a non-ad blocking user.
+      }
+    }
+  });
     </script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-    <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+   
+  
+  
+
+  
     <style amp-custom>
 
       body {
@@ -181,29 +222,7 @@
 
 <script>
 
-   // Make sure that the properties exist on the window.
-  window.googlefc = window.googlefc || {};
-  window.googlefc.ccpa = window.googlefc.ccpa || {}
-  // Signals that the default DNS link will be overridden.
-  googlefc.ccpa.overrideDnsLink = true;
-
-    // Make sure that the properties exist on the window.
-    window.googlefc = window.googlefc || {};
-    window.googlefc.ccpa = window.googlefc.ccpa || {}
-    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
-
-    // To guarantee functionality, this must go before the FC tag on the page.
-    googlefc.controlledMessagingFunction = (message) => {
-     user.isSubscriber().then(
-       function (isSubscriber) {
-         // Do not show the message if a user is a subscriber.
-         if (isSubscriber) {
-           message.proceed(false);
-         } else {
-           message.proceed(true);
-         }
-       }
-     );
+   
   </script>
   
 
@@ -242,31 +261,6 @@
 
 <div align="center">
 <script src="main.dart.js" type="application/javascript"></script>
-
-
-    
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
-    }
-  
-  // Make sure that the properties exist on the window.
-  window.googlefc = window.googlefc || {};
-  window.googlefc.ccpa = window.googlefc.ccpa || {}
-  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
-
-  // Queue the callback on the callbackQueue.
-  googlefc.callbackQueue.push({
-    'AD_BLOCK_DATA_READY':
-    () => {
-      if (googlefc.getAdBlockerStatus() == googlefc.AdBlockerStatusEnum.NO_AD_BLOCKER) {
-        // Handle a non-ad blocking user.
-      }
-    }
-  });
-</script>
 </div>
 </body>
 </html>
