@@ -1,7 +1,7 @@
-name: tap_builder
+name: myandroid
 description: A simple widget for building interactive areas.
 version: 0.3.5
-homepage: https://github.com/aloisdeniel/tap_builder
+homepage: https://github.com/amaapp333/myandroid
 
 environment:
   sdk: ">=2.16.0 <3.0.0"
