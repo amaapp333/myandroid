@@ -5,36 +5,30 @@
     <title>Maliek News Blog</title>
     <link rel="canonical" href="./regular-html-version.html" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <meta
-      name="viewport"
-      content="width=device-width,minimum-scale=1,initial-scale=1"
-    />
-    <meta 
-       content="IE=Edge" http-equiv="X-UA-Compatible"/>
-    <meta 
-       name="description" 
-       content="A new Flutter project."/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+    <meta name="description" content="A new Flutter project."/>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="example">
+
     <link rel="apple-touch-icon" href="icons/Icon-192.png">
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="manifest" href="manifest.json">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Article Headline",
+        "image": ["thumbnail1.jpg"],
+        "datePublished": "2022-02-05T08:00:00+08:00"
+      }
+    </script>
   
+   
   
-   <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
-
-  <base href="/">
+  <base href="/amp/">
 
   
   <!-- iOS meta tags & icons -->
@@ -48,15 +42,7 @@
       }
     </style>
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Article Headline",
-        "image": ["thumbnail1.jpg"],
-        "datePublished": "2022-02-05T08:00:00+08:00"
-      }
-    </script>
+    
 
     <script
       async
@@ -160,37 +146,41 @@
 
 </head>
 <body>
-<div align="center">
-<h1>My Android App</h1>
+<amp-auto-ads amp-access="FALSE" amp-access-hide type="adsense" data-ad-client="ca-pub-5439573510495356"></amp-auto-ads>
+    <header>
+      <amp-img layout="responsive" id="header-img" src="img/hero@2x.jpg" width="1200" height="900"></amp-img>
+    </header>
+    <h1>My Android App</h1>
 
-
-    <p>
-      Some text
-      <amp-img src="sample.jpg" width="300" height="300"></amp-img>
-    </p>
-
-    <p>
-      Some text
-      <amp-img src="sample.jpg" width="300" height="300"></amp-img>
-    </p>
-
-
-    <amp-ad
-      width="300"
-      height="250"
-      type="a9"
-      data-aax_size="300x250"
-      data-aax_pubname="test123"
-      data-aax_src="302"
-    >
-    </amp-ad>
+    <div class="with-left-margin">
+      <div class="main-content">
+        <p>
+          Lorem ipsum dolor sit amet, has te dico epicuri, ad sumo constituam cum. Vix rebum partem graecis in, id legimus lobortis expetendis per. Zril tritani principes has in. Sea ei exerci ridens vituperatoribus. Id inermis invenire mei, ei iudico epicuri mea. Ad eos debet perfecto volutpat, suas error usu ut, est everti comprehensam no.
+        </p>
+        <p>
+          Dolor numquam consulatu ne cum, ei sed essent appellantur, eam et appetere partiendo. Vim mucius vituperatoribus ut. Consul virtute eum id, has no postulant dissentiet. Errem tibique copiosae ut has, ut labore nemore assentior per.
+        </p>
+        <p>
+          Essent signiferumque necessitatibus in mea. Sit minim petentium dissentiunt ei, ius inimicus mnesarchum ut. Errem maiestatis cu nec, dolor nusquam interesset ut qui. Mea in eripuit blandit complectitur. An eos recteque adversarium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, has te dico epicuri, ad sumo constituam cum. Vix rebum partem graecis in, id legimus lobortis expetendis per. Zril tritani principes has in. Sea ei exerci ridens vituperatoribus. Id inermis invenire mei, ei iudico epicuri mea. Ad eos debet perfecto volutpat, suas error usu ut, est everti comprehensam no.
+        </p>
+        <p>
+          Dolor numquam consulatu ne cum, ei sed essent appellantur, eam et appetere partiendo. Vim mucius vituperatoribus ut. Consul virtute eum id, has no postulant dissentiet. Errem tibique copiosae ut has, ut labore nemore assentior per.
+        </p>
+      </div>
     </div>
-
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+    <div id="footer">Powered by AMP</div>
 
 
+
+
+<div align="center">
+<script src="main.dart.js" type="application/javascript"></script>
+
+
+    
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-frame', function () {
@@ -213,6 +203,6 @@
     }
   });
 </script>
-<script src="main.dart.js" type="application/javascript"></script>
+</div>
 </body>
 </html>
