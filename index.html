@@ -232,8 +232,50 @@
 </head>
 <body>
     <div align="center">
-
-    <h1>Android Blog</h1>
+    <amp-video
+        class="hero"
+        width="1080"
+        height="1920"
+        layout="fill"
+        autoplay loop>
+        <source src="./videos/single-video-1080x1920.mp4" type="video/mp4" />
+</amp-video>
+  <div class="container">
+    <div class="bottom">
+      <!-- Recommended logo aspect ratio is 1:1. Replace logo-single-video.png with your own logo. -->
+      <amp-img alt="logo"
+        class="logo"
+        src="logo-single-video.png"
+        width="146"
+        height="146"
+        layout="intrinsic">
+      </amp-img>
+      <!-- Recommended text font size for heading is min 16pt and max 50pt. Color can be flexible. -->
+      <div class="heading-text-box">
+        <amp-fit-text
+          id="heading-fit-text"
+          width="80"
+          height="15"
+          layout="fill"
+          min-font-size="16"
+          max-font-size="50">
+          Explore the Sea
+      </amp-fit-text>
+    </div>
+    <!-- Recommended text font size for subtitle is min 12pt and max 16pt. Color can be flexible. -->
+    <div class="subtitle-text-box">
+      <amp-fit-text
+        id="subtitle-fit-text"
+        width="80"
+        height="10"
+        layout="fill"
+        min-font-size="12"
+        max-font-size="16">
+        DISCOVER THE UNKNOWN
+      </amp-fit-text>
+    </div>
+  </div>
+    
     
     </div>
 
