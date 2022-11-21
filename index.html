@@ -1,9 +1,129 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sample document</title>
+    <link rel="canonical" href="./regular-html-version.html" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-custom>
+      h1 {
+        color: red;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Article headline",
+        "image": ["thumbnail1.jpg"],
+        "datePublished": "2015-02-05T08:00:00+08:00"
+      }
+    </script>
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+    ></script>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
 
 
 <script>
+// This callback will be called with the user CCPA decision.
+const ccpaCompletionCallback = (userOptedOut) => {
+  // Insert handling for user opt-out status here.
+}
+// Invoke the CCPA confirmation dialog when the user clicks the link.
+document.getElementById("your-custom-ccpa-do-not-sell-link").addEventListener(
+  "click", () => googlefc.ccpa.openConfirmationDialog(ccpaCompletionCallback));
+
+
+  // Make sure that the properties exist on the window.
+  window.googlefc = window.googlefc || {};
+  window.googlefc.ccpa = window.googlefc.ccpa || {}
+  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+  // Queue the callback on the callbackQueue.
+  googlefc.callbackQueue.push({
+    'CONSENT_DATA_READY':
+    () => __tcfapi('getTCData', 0, (data, success) => console.log(data))
+  });
+</script>
+
+<script>
+
+   // Make sure that the properties exist on the window.
+  window.googlefc = window.googlefc || {};
+  window.googlefc.ccpa = window.googlefc.ccpa || {}
+  // Signals that the default DNS link will be overridden.
+  googlefc.ccpa.overrideDnsLink = true;
+
     // Make sure that the properties exist on the window.
     window.googlefc = window.googlefc || {};
     window.googlefc.ccpa = window.googlefc.ccpa || {}
@@ -47,10 +167,35 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>maliek news</title>
+  <title>Maliek News App</title>
   <link rel="manifest" href="manifest.json">
+
 </head>
 <body>
+<h1>My Android App</h1>
+
+    <p>
+      Some text
+      <amp-img src="sample.jpg" width="300" height="300"></amp-img>
+    </p>
+
+    <p>
+      Some text
+      <amp-img src="sample.jpg" width="300" height="300"></amp-img>
+    </p>
+
+
+    <amp-ad
+      width="300"
+      height="250"
+      type="a9"
+      data-aax_size="300x250"
+      data-aax_pubname="test123"
+      data-aax_src="302"
+    >
+    </amp-ad>
+
+
 
 
   <!-- This script installs service_worker.js to provide PWA functionality to
