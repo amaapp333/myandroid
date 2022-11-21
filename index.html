@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+<script>
+    // Make sure that the properties exist on the window.
+    window.googlefc = window.googlefc || {};
+    window.googlefc.ccpa = window.googlefc.ccpa || {}
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    // To guarantee functionality, this must go before the FC tag on the page.
+    googlefc.controlledMessagingFunction = (message) => {
+     user.isSubscriber().then(
+       function (isSubscriber) {
+         // Do not show the message if a user is a subscriber.
+         if (isSubscriber) {
+           message.proceed(false);
+         } else {
+           message.proceed(true);
+         }
+       }
+     );
+  </script>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -35,13 +56,31 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
+      window.addEventListener('flutter-frame', function () {
         navigator.serviceWorker.register('flutter_service_worker.js');
       });
     }
-  </script>
+  
+  // Make sure that the properties exist on the window.
+  window.googlefc = window.googlefc || {};
+  window.googlefc.ccpa = window.googlefc.ccpa || {}
+  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+  // Queue the callback on the callbackQueue.
+  googlefc.callbackQueue.push({
+    'AD_BLOCK_DATA_READY':
+    () => {
+      if (googlefc.getAdBlockerStatus() == googlefc.AdBlockerStatusEnum.NO_AD_BLOCKER) {
+        // Handle a non-ad blocking user.
+      }
+    }
+  });
+</script>
+
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
