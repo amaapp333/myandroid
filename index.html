@@ -15,7 +15,14 @@
        name="description" 
        content="A new Flutter project."/>
 
-
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="example">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json">
+  
+  
    <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -31,16 +38,9 @@
 
   
   <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="example">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
   
-  <link rel="manifest" href="manifest.json">
+  <!-- Favicon -->
+  
     <style amp-custom>
       h1 {
         color: red;
@@ -126,28 +126,9 @@
           animation: none;
         }
       </style>
-    </noscript>    
-    <script>
-// This callback will be called with the user CCPA decision.
-const ccpaCompletionCallback = (userOptedOut) => {
-  // Insert handling for user opt-out status here.
-}
-// Invoke the CCPA confirmation dialog when the user clicks the link.
-document.getElementById("your-custom-ccpa-do-not-sell-link").addEventListener(
-  "click", () => googlefc.ccpa.openConfirmationDialog(ccpaCompletionCallback));
+    </noscript>
 
-
-  // Make sure that the properties exist on the window.
-  window.googlefc = window.googlefc || {};
-  window.googlefc.ccpa = window.googlefc.ccpa || {}
-  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
-
-  // Queue the callback on the callbackQueue.
-  googlefc.callbackQueue.push({
-    'CONSENT_DATA_READY':
-    () => __tcfapi('getTCData', 0, (data, success) => console.log(data))
-  });
-</script>
+    
 
 <script>
 
@@ -179,7 +160,9 @@ document.getElementById("your-custom-ccpa-do-not-sell-link").addEventListener(
 
 </head>
 <body>
+<div align="center">
 <h1>My Android App</h1>
+
 
     <p>
       Some text
@@ -201,9 +184,7 @@ document.getElementById("your-custom-ccpa-do-not-sell-link").addEventListener(
       data-aax_src="302"
     >
     </amp-ad>
-
-
-
+    </div>
 
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -232,7 +213,6 @@ document.getElementById("your-custom-ccpa-do-not-sell-link").addEventListener(
     }
   });
 </script>
-
-  <script src="main.dart.js" type="application/javascript"></script>
+<script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
