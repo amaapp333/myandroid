@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-    
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+    <meta name="description" content="A new Flutter project."/>
+
     <title>Maliek News Blog</title>
 
     <link rel="canonical" href="./regular-html-version.html" />
@@ -13,17 +15,28 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <base href="/">
-
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
-    <meta name="description" content="A new Flutter project."/>
-
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+    ></script>
+     
+    
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <meta name="apple-mobile-web-app-title" content="example">
 
     <link rel="apple-touch-icon" href="icons/Icon-192.png">
     <link rel="icon" type="image/png" href="favicon.png"/>
+
     <link rel="manifest" href="manifest.json">
+
     <script id="amp-access" type="application/Id+json">
       {
         "@context": "http://schema.org",
@@ -38,57 +51,8 @@
         "login": "https://ampbyexample.com/components/amp-access/login?rid=READER_ID&url=CANONICAL_URL",
         "authorizationFallbackResponse": {"error": true}
       }
-
-  // Make sure that the properties exist on the window.
-  window.googlefc = window.googlefc || {};
-  window.googlefc.ccpa = window.googlefc.ccpa || {}
-  // Signals that the default DNS link will be overridden.
-  googlefc.ccpa.overrideDnsLink = true;
-
-    // Make sure that the properties exist on the window.
-    window.googlefc = window.googlefc || {};
-    window.googlefc.ccpa = window.googlefc.ccpa || {}
-    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
-
-    // To guarantee functionality, this must go before the FC tag on the page.
-    googlefc.controlledMessagingFunction = (message) => {
-     user.isSubscriber().then(
-       function (isSubscriber) {
-         // Do not show the message if a user is a subscriber.
-         if (isSubscriber) {
-           message.proceed(false);
-         } else {
-           message.proceed(true);
-         }
-       }
-     );
-     if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
-    }
-  
-  // Make sure that the properties exist on the window.
-  window.googlefc = window.googlefc || {};
-  window.googlefc.ccpa = window.googlefc.ccpa || {}
-  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
-
-  // Queue the callback on the callbackQueue.
-  googlefc.callbackQueue.push({
-    'AD_BLOCK_DATA_READY':
-    () => {
-      if (googlefc.getAdBlockerStatus() == googlefc.AdBlockerStatusEnum.NO_AD_BLOCKER) {
-        // Handle a non-ad blocking user.
-      }
-    }
-  });
     </script>
-  
-   
-  
-  
-
-  
+    
     <style amp-custom>
 
       body {
@@ -141,24 +105,9 @@
         text-align: center;
         line-height: 30px;
       }
-    
-      h1 {
-        color: red;
-        align: center;
-      }
     </style>    
 
-    <script
-      async
-      custom-element="amp-carousel"
-      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
-    ></script>
-    <script
-      async
-      custom-element="amp-ad"
-      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-    ></script>
-     
+
     <style amp-boilerplate>
       body {
         -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -217,22 +166,24 @@
         }
       </style>
     </noscript>
-
-    
-
-<script>
-
-   
-  </script>
-  
-
 </head>
 <body>
-<amp-auto-ads amp-access="FALSE" amp-access-hide type="adsense" data-ad-client="ca-pub-5439573510495356"></amp-auto-ads>
+<div align="center">
+
+<script async src="/dist/alp.max.js"></script>
+<a href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvenF_MgYsNxq34Qfcf11Jd3Zj-oGnwq9lNtBfk9Z2OIzcOmdBC6Cxo7z_LTDnXUY2OFU7j9RnVxKPCrnyzZPVCm9qBV8gJB_wUo1YWioB1HoNy5tNkGQnmFngnbR4B8TxGIZSgGFIV3xxTN6WeeWSyu6PkyXHzh5JZip1ZaaEYDbA0jt1zdZD7i-q-vloPQDg7xuC-juobHJqhuIzuyIIC7vd06Smzmec&sai=AMfl-YRM4s_tsvh3KxxzqTxeECl7XFF7ZYUAMz5fyi7tXN-bw8govNKz0k5be4H7lu_q9r3eqQanLvNxzg&sig=Cg0ArKJSzE_IUhqd-hBcEAE&urlfix=1&adurl=https://cdn.ampproject.org/c/s/www.buzzfeed.com/amphtml/stephaniemcneal/you-can-use-this-website-to-make-president-obama-say-whatever" target=_top>
+<img src="http://placehold.it/300x250">
+</a>
+
+
+</div>
+
+    <amp-auto-ads amp-access="FALSE" amp-access-hide type="adsense" data-ad-client="ca-pub-5439573510495356"></amp-auto-ads>
 
     <header>
-      <amp-img layout="responsive" id="header-img" src="https://raw.githubusercontent.com/amaapp333/myandroid/main/doc/tap_builder.gif" width="1200" height="900"></amp-img>
+    <amp-img layout="responsive" id="header-img" src="   " width="1200" height="900"></amp-img>
     </header>
+
     <h1>Android Blog</h1>
 
     <div class="with-left-margin">
@@ -255,12 +206,5 @@
       </div>
     </div>
     <div id="footer">Powered by AMP</div>
-
-
-
-
-<div align="center">
-<script src="main.dart.js" type="application/javascript"></script>
-</div>
 </body>
 </html>
