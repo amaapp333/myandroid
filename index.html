@@ -13,7 +13,7 @@
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
   <style>
     body {
-      background-color: yellowgreen;
+      background-color: green;
       color: white;
       width: 100vw;
       height: 100vh;
@@ -21,25 +21,13 @@
   </style>
 </head>
 <body>
+
 <div align="center">
 <h1>My News Blog</h1>
 
-<div id="animation-target"><b>Maliek News</b></div>
+
 </div>
 
-<amp-animation layout="nodisplay"  trigger="visibility">
-  <script type="application/json">
-    {
-      "duration": "1s",
-      "iterations": "5",
-      "fill": "both",
-      "direction": "alternate",
-      "selector": "#animation-target",
-      "easing": "cubic-bezier(0,0,.21,1)",
-      "keyframes": {"transform": "scale(2) translate(100px, 100px)"}
-    }
-  </script>
-</amp-animation>
 
 
 
