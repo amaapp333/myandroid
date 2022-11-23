@@ -6,54 +6,7 @@
   
   <link rel="amphtml" href="https://www.example.com/url/to/amp/document.html">
  
-  <script>
-  // Make sure that the googlefc property exists on the window.
-  window.googlefc = window.googlefc || {};
-  // To guarantee functionality, this must go before the FC tag on the page.
-  googlefc.controlledMessagingFunction = (message) => {
-    // How many pageviews before the message is shown.
-    var freePageviewsLimit = 3;
-
-    // Check how many pages the user has seen.
-    var pagesViewed = getPagesViewed();
-
-    // Show the message if the user has seen more pages than the free limit.
-    if (pagesViewed >= freePageviewsLimit) {
-      message.proceed(true);
-    } else {
-      message.proceed(false);
-    }
-  };
-
-  // Make sure that the googlefc property exists on the window.
-  window.googlefc = window.googlefc || {};
-  googlefc.callbackQueue = googlefc.callbackQueue || [];
-  googlefc.callbackQueue.push({
-    'AD_BLOCK_DATA_READY': function() {
-      switch (googlefc.getAdBlockerStatus()) {
-        case googlefc.AdBlockerStatusEnum.EXTENSION_LEVEL_AD_BLOCKER:
-        case googlefc.AdBlockerStatusEnum.NETWORK_LEVEL_AD_BLOCKER:
-          ga('send', 'event', {
-            eventCategory: 'NTG adblock',
-            eventAction: 'detected',
-            eventLabel: '<page url>',
-            nonInteraction: true
-          });
-          break;
-      }
-      switch (googlefc.getAllowAdsStatus()) {
-        case googlefc.AllowAdsStatusEnum.ADS_ALLOWED:
-          ga('send', 'event', {
-            eventCategory: 'NTG adblock',
-            eventAction: 'allow-ads',
-            eventLabel: '<page url>',
-            nonInteraction: true
-          });
-          break;
-      }
-   }});
-</script>
-
+  
   <style>
     body {
       max-width: 600px;
@@ -257,9 +210,14 @@
       color: #fff;
     }
   </style>
+
+
+
 </head>
 <body>
-<header><div class="tab header-title"> Maliek Galant </div> </header> 
+<header>
+<div class="tab header-title"> Maliek Galant </div> 
+</header> 
 
 <section class="hero"> <h1>Maliek Galant</h1> </section>
 
@@ -270,11 +228,10 @@
          
 
         
-<section class="desc"> <h2>Advertisement</h2> <p> This is version <span class="version">RuntimeVersion$</span> of the AMP runtime. For a list of commits contained in this release, click <a target="_blank" href="https://github.com/amaapp333/myandroid/releases/tag/$internalRuntimeVersion$">Here</a>.</p></section> 
 
-<section class="desc"> <h2>Release Channels</h2>
+        <h2>Advertisement</h2> 
+         <p> 
 
-<p>
           Over the past several decades, it has been a trusted source of news
           and a lodestar of independent journalism. However, on Monday the
           paper’s owner, construction tycoon Adnan Kivan, announced the outlet
@@ -304,13 +261,6 @@
       </div>
      
 
-      
-
-      <div class="footer">
-        
-       
-      </div>
-  
 
 
 
