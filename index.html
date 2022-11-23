@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
-  
+    <meta name="amp-experiments-opt-in" content="experiment-a,experiment-b">
+ 
     <link rel="canonical" href="./regular-html-version.html" />
  
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
@@ -44,6 +45,13 @@
     <noscript>
 
     </noscript>
+    <script>
+  (self.AMP = self.AMP || []).push(function (AMP) {
+    AMP.toggleExperiment('my-experiment', true);
+  });
+</script>
+
+
 </head>
 <body>
  
