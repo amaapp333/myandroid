@@ -5,9 +5,55 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   
   <link rel="amphtml" href="https://www.example.com/url/to/amp/document.html">
+ 
+  <script>
+  // Make sure that the googlefc property exists on the window.
+  window.googlefc = window.googlefc || {};
+  // To guarantee functionality, this must go before the FC tag on the page.
+  googlefc.controlledMessagingFunction = (message) => {
+    // How many pageviews before the message is shown.
+    var freePageviewsLimit = 3;
 
+    // Check how many pages the user has seen.
+    var pagesViewed = getPagesViewed();
 
-  <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
+    // Show the message if the user has seen more pages than the free limit.
+    if (pagesViewed >= freePageviewsLimit) {
+      message.proceed(true);
+    } else {
+      message.proceed(false);
+    }
+  };
+
+  // Make sure that the googlefc property exists on the window.
+  window.googlefc = window.googlefc || {};
+  googlefc.callbackQueue = googlefc.callbackQueue || [];
+  googlefc.callbackQueue.push({
+    'AD_BLOCK_DATA_READY': function() {
+      switch (googlefc.getAdBlockerStatus()) {
+        case googlefc.AdBlockerStatusEnum.EXTENSION_LEVEL_AD_BLOCKER:
+        case googlefc.AdBlockerStatusEnum.NETWORK_LEVEL_AD_BLOCKER:
+          ga('send', 'event', {
+            eventCategory: 'NTG adblock',
+            eventAction: 'detected',
+            eventLabel: '<page url>',
+            nonInteraction: true
+          });
+          break;
+      }
+      switch (googlefc.getAllowAdsStatus()) {
+        case googlefc.AllowAdsStatusEnum.ADS_ALLOWED:
+          ga('send', 'event', {
+            eventCategory: 'NTG adblock',
+            eventAction: 'allow-ads',
+            eventLabel: '<page url>',
+            nonInteraction: true
+          });
+          break;
+      }
+   }});
+</script>
+
   <style>
     body {
       max-width: 600px;
