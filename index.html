@@ -8,7 +8,209 @@
 
 
   <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
-  
+  <style>
+    body {
+      max-width: 600px;
+      margin: auto;
+      font-family: Roboto, verdana, arial, sans-serif;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .header-title {
+      color: #1b1464;
+      font-family: Roboto, verdana, arial, sans-serif;
+      letter-spacing: 2px;
+      padding-left: 0;
+      padding-top: 18px;
+      text-transform: uppercase;
+      width: 100%;
+      display: inline-block;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 16px;
+      background-color: #147bc1;
+      color: #fff;
+    }
+
+    h2 {
+      color: #147bc1;
+    }
+
+    .version {
+      color: gray;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .content {
+      margin: 16px;
+      display: block;
+    }
+
+    .desc {
+      padding: 16px;
+      display: block;
+      color: orange;
+    }
+
+    a {
+      color: #3ab3eb;
+    }
+
+    .content a {
+      text-decoration: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 4px;
+    }
+
+    .button-cell {
+      text-align: center;
+    }
+
+    button {
+      min-width: 60px;
+    }
+
+    details {
+      border: solid 1px gray;
+      margin-top: 5px;
+      padding: 10px;
+    }
+
+    details summary {
+      color: gray;
+      cursor: pointer;
+    }
+
+    details[open] summary {
+      color: inherit;
+    }
+
+    #subdomain {
+      color: gray;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    tr[data-on='0'] button {
+      background: #aaa;
+      color: #777;
+    }
+
+    tr[data-on='1'] button {
+      background: green;
+      color: #fff;
+    }
+
+    .on, .off, .default {
+      display: none;
+    }
+
+    tr[data-on='0'] .off {
+      display: block;
+    }
+
+    tr[data-on='1'] .on {
+      display: block;
+    }
+
+    tr[data-on='default'] .default {
+      display: block;
+    }
+
+    #rtv {
+      border: solid 1px gray;
+      width: calc(100% - 150px);
+      padding: 10px;
+    }
+
+    #rtv-submit {
+      background: #aaa;
+      margin: 5px;
+    }
+
+    #rtv-submit[disabled] {
+      color: #777;
+    }
+
+    #redirect > input {
+      border: solid 1px gray;
+      width: calc(100% - 20px);
+      padding: 10px;
+    }
+
+    #redirect > button {
+      border: solid 1px gray;
+      padding: 5px 15px;
+      margin: 5px;
+    }
+
+    #redirect > h4 {
+      border: inset;
+      padding: 10px;
+    }
+
+    .popup-graypane {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-graypane:not(.show) {
+      display: none;
+    }
+
+    .popup {
+      background: #fff;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      max-width: 90%;
+      max-height: 90%;
+      min-width: 280px;
+      min-height: 120px;
+    }
+
+    .popup-body {
+      padding: 16px;
+    }
+
+    .popup-button-bar {
+      padding: 16px;
+      text-align: right;
+    }
+
+    .popup-button-bar button {
+      margin: 0 4px;
+      border: 1px solid #eee;
+      border-radius: 2px;
+      background: #fff;
+      color: #222;
+    }
+
+    #popup-button-ok {
+      background: #03a9f4;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
